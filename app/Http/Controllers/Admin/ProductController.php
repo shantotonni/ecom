@@ -32,7 +32,7 @@ class ProductController extends Controller
             'category_id' => 'required|numeric',
             'remarks' => 'required',
             'image' => 'required',
-            'image_thai' => 'required',
+           // 'image_thai' => 'required',
             'code' => 'required|unique:products,code',
         ]);
 
@@ -45,14 +45,14 @@ class ProductController extends Controller
             $name = "default.png";
         }
 
-        if ($request->hasFile('image_thai')) {
-            $image_thai = $request->file('image_thai');
-            $name_thai = time().'.'.$image_thai->getClientOriginalExtension();
-            $destinationPath = public_path('product/');
-            $image_thai->move($destinationPath, $name_thai);
-        }else{
-            $name_thai = "default.png";
-        }
+//        if ($request->hasFile('image_thai')) {
+//            $image_thai = $request->file('image_thai');
+//            $name_thai = time().'.'.$image_thai->getClientOriginalExtension();
+//            $destinationPath = public_path('product/');
+//            $image_thai->move($destinationPath, $name_thai);
+//        }else{
+//            $name_thai = "default.png";
+//        }
 
         $product               = new Product();
         $product->name         = $request->name;
@@ -64,7 +64,7 @@ class ProductController extends Controller
         $product->category_id  = $request->category_id;
         $product->remarks  = $request->remarks;
         $product->image  = $name;
-        $product->image_thai  = $name_thai;
+       // $product->image_thai  = $name_thai;
         $product->save();
 
         Toastr::success('Product created successfully :)' ,'Success');
@@ -105,19 +105,19 @@ class ProductController extends Controller
             $name = $product->image;
         }
 
-        if ($request->hasFile('image_thai')) {
-            $file_old_thai = public_path('product/').$product->image_thai;
-            if (File::exists($file_old_thai)) {
-                unlink($file_old_thai);
-            }
-
-            $image_thai = $request->file('image_thai');
-            $name_thai = time().'.'.$image_thai->getClientOriginalExtension();
-            $destinationPath = public_path('product/');
-            $image_thai->move($destinationPath, $name_thai);
-        }else{
-            $name_thai = $product->image_thai;
-        }
+//        if ($request->hasFile('image_thai')) {
+////            $file_old_thai = public_path('product/').$product->image_thai;
+////            if (File::exists($file_old_thai)) {
+////                unlink($file_old_thai);
+////            }
+//
+//            $image_thai = $request->file('image_thai');
+//            $name_thai = time().'.'.$image_thai->getClientOriginalExtension();
+//            $destinationPath = public_path('product/');
+//            $image_thai->move($destinationPath, $name_thai);
+//        }else{
+//            $name_thai = $product->image_thai;
+//        }
 
         $product->name         = $request->name;
         $product->name_thai         = $request->name_thai;
@@ -128,7 +128,7 @@ class ProductController extends Controller
         $product->category_id  = $request->category_id;
         $product->remarks  = $request->remarks;
         $product->image  = $name;
-        $product->image_thai  = $name_thai;
+        //$product->image_thai  = $name_thai;
         $product->save();
 
         Toastr::success('Product Updated successfully :)' ,'Success');

@@ -62,7 +62,7 @@
                                                 </td>
                                                 <td class="text-center">
                                                     <img src="{{ url('product/'.$product->image) }}" alt="" height="80">
-                                                    <img src="{{ url('product/'.$product->image_thai) }}" alt="" height="80">
+{{--                                                    <img src="{{ url('product/'.$product->image_thai) }}" alt="" height="80">--}}
                                                 </td>
                                                 <td class="text-center">
                                                     {!! $product->remartks  !!}

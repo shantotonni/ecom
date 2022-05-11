@@ -3,15 +3,15 @@
 <div class="header-bot">
     <div class="header-bot_inner_wthreeinfo_header_mid">
         <div class="col-md-4 header-middle">
-            <form action="#" method="post">
-                <input type="search" name="search" placeholder="Search here..." required="">
-                <input type="submit" value=" ">
-                <div class="clearfix"></div>
-            </form>
+{{--            <form action="#" method="post">--}}
+{{--                <input type="search" name="search" placeholder="Search here..." required="">--}}
+{{--                <input type="submit" value=" ">--}}
+{{--                <div class="clearfix"></div>--}}
+{{--            </form>--}}
         </div>
         <!-- header-bot -->
         <div class="col-md-4 logo_agile">
-            <h1><a href="{{ route('home') }}"><span>E</span>Com <i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
+            <h1><a href="{{ route('home') }}"><span>E</span>mirathai </a></h1>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -39,8 +39,7 @@
                             @foreach($categories as $category)
                             <li class="menu__item"><a class="menu__link" href="{{ route('category.product', $category->slug) }}">{{ $category->name }}</a></li>
                             @endforeach
-{{--                            <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>--}}
-{{--                            <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>--}}
+                            <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                 </div>

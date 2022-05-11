@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@home')->name('home');
 Route::get('category/product/{slug}', 'HomeController@categoryProduct')->name('category.product');
+Route::get('product-details/{slug}', 'HomeController@productDetails')->name('product.details');
 
 Route::get('login', 'Auth\LoginController@loginForm')->name('login');
 Route::post('admin-login', 'Auth\LoginController@login')->name('admin.login');

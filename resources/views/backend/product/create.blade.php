@@ -107,13 +107,13 @@
                                                             <div class="error" style="color: red">{{ $errors->first('name_thai') }}</div>
                                                         @endif
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label>Product Image</label>
-                                                        <input type="file" class="form-control" name="image_thai" required="">
-                                                        @if ($errors->has('image_thai'))
-                                                            <div class="error" style="color: red">{{ $errors->first('image_thai') }}</div>
-                                                        @endif
-                                                    </div>
+{{--                                                    <div class="form-group">--}}
+{{--                                                        <label>Product Image</label>--}}
+{{--                                                        <input type="file" class="form-control" name="image_thai" required="">--}}
+{{--                                                        @if ($errors->has('image_thai'))--}}
+{{--                                                            <div class="error" style="color: red">{{ $errors->first('image_thai') }}</div>--}}
+{{--                                                        @endif--}}
+{{--                                                    </div>--}}
                                                     <div class="form-group">
                                                         <label>Description</label>
                                                         <textarea name="description_thai" class="summernote"></textarea>

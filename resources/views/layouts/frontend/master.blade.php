@@ -28,25 +28,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="{{ asset('frontend/js/jquery-2.1.4.min.js') }}"></script>
 <!-- for bootstrap working -->
 <script type="text/javascript" src="{{ asset('frontend/js/bootstrap.js') }}"></script>
-{{--<script type="text/javascript" src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>--}}
 
-<script>
-    // var owl = $('.owl-carousel');
-    // owl.owlCarousel({
-    //     margin: 10,
-    //     loop: true,
-    //     responsive: {
-    //         0: {
-    //             items: 1
-    //         },
-    //         600: {
-    //             items: 2
-    //         },
-    //         1000: {
-    //             items: 3
-    //         }
-    //     }
-    // })
-</script>
 </body>
 </html>

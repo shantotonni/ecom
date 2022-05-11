@@ -38,7 +38,7 @@
                             $short = strip_tags($category->description);
                         ?>
                         <p class="card-text">{{ Illuminate\Support\Str::limit($short, 150) }}</p>
-                        <a href="">Click Here For Details</a>
+                        <a href="{{ route('category.product', $category->slug) }}">Click Here For Details</a>
                     </div>
                 </div>
             @endforeach
