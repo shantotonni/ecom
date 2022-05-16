@@ -1,6 +1,6 @@
 @extends('layouts.frontend.master')
 
-@section('title','Category Product | Ecom')
+@section('title','Category Product | Emirathai')
 
 @section('content')
     <div class="banner-bootom-w3-agileits">
@@ -16,10 +16,11 @@
                                 <img src="{{ url('product/'.$product->image) }}" alt="" class="pro-image-back">
                             </div>
                             <div class="item-info-product ">
-                                <h4><a href="single.html">Formal Blue Shirt</a></h4>
-                                <a href="{{ route('product.details',\Illuminate\Support\Facades\Crypt::encrypt($product->id)) }}" class="btn btn-success" style="color: white;display: block;padding: 8px">View Details</a>
+                                <h4><a href="{{ route('product.details',$product->slug) }}">Formal Blue Shirt</a></h4>
+                                <a href="{{ route('product.details',$product->slug) }}" class="btn btn-success" style="color: white;display: block;padding: 8px">View Details</a>
                             </div>
                         </div>
+
                     </div>
                     <div class="clearfix"></div>
                 </div>

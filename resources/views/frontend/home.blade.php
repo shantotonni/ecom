@@ -1,19 +1,19 @@
 @extends('layouts.frontend.master')
 
-@section('title','Ecom')
+@section('title','Home | Emirathai')
 
 @section('content')
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         @foreach($sliders as $key => $slider)
-        <li data-target="#myCarousel" data-slide-to="{{ $key }}" class="{{ $key == 0 ? ' active' : '' }}"></li>
+          <li data-target="#myCarousel" data-slide-to="{{ $key }}" class="{{ $key == 0 ? ' active' : '' }}"></li>
         @endforeach
     </ol>
     <div class="carousel-inner" role="listbox">
         @foreach($sliders as $key => $slider)
         <div class="item {{ $key == 0 ? ' active' : '' }}">
-            <img src="{{ asset('slider/'.$slider->image) }}" alt="" style="height: 600px;width: 100%">
+            <img src="{{ asset('slider/'.$slider->image) }}" alt="" style="width: 100%">
         </div>
         @endforeach
     </div>
@@ -52,7 +52,7 @@
 <style>
     .section{
         background: #d9efdc;
-        height: 200px;
+        height: 210px;
         margin-top: 10px;
     }
     h2{

@@ -68,7 +68,7 @@ class ProductController extends Controller
         $product->save();
 
         Toastr::success('Product created successfully :)' ,'Success');
-        return redirect()->route('product.index');
+        return redirect()->route('product.list');
     }
 
     public function edit($id){
@@ -132,6 +132,6 @@ class ProductController extends Controller
         $product->save();
 
         Toastr::success('Product Updated successfully :)' ,'Success');
-        return redirect()->route('product.index');
+        return redirect()->route('product.list');
     }
 }

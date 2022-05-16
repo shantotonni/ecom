@@ -11,7 +11,10 @@
         </div>
         <!-- header-bot -->
         <div class="col-md-4 logo_agile">
-            <h1><a href="{{ route('home') }}"><span>E</span>mirathai </a></h1>
+            <a href="{{ route('home') }}">
+                <img src="{{ asset('frontend/images/logo2.png') }}" alt="" height="100px">
+{{--                <h1><a href="{{ route('home') }}"><span>E</span>mirathai </a></h1>--}}
+            </a>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -35,11 +38,15 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav menu__list">
-                            <li class="active menu__item menu__item--current"><a class="menu__link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a></li>
+                            <li class="{{ (request()->is('/')) ? 'active menu__item--current' : '' }} menu__item "><a class="menu__link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a></li>
+                            @php
+                                $segment1 = Request::segment(2);
+                            @endphp
                             @foreach($categories as $category)
-                            <li class="menu__item"><a class="menu__link" href="{{ route('category.product', $category->slug) }}">{{ $category->name }}</a></li>
+                            <li class="menu__item @if($segment1 ==  $category->slug) active menu__item--current @endif"><a class="menu__link" href="{{ route('category.product', $category->slug) }}">{{ $category->name }}</a></li>
                             @endforeach
-                            <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+                            <li class="menu__item {{ (request()->is('contact-us')) ? 'active menu__item--current' : '' }}"><a class="menu__link" href="{{ route('contact.us') }}">Contact</a></li>
+                            <li class="menu__item {{ (request()->is('order')) ? 'active menu__item--current' : '' }}"><a class="menu__link" href="{{ route('order') }}">Order</a></li>
                         </ul>
                     </div>
                 </div>
@@ -47,4 +54,5 @@
         </div>
         <div class="clearfix"></div>
     </div>
+
 </div>

@@ -59,7 +59,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Product Image</label>
-                                                        <input type="file" class="form-control" name="image" required="">
+                                                        <input type="file" class="form-control" name="image">
                                                         @if ($errors->has('image'))
                                                             <div class="error" style="color: red">{{ $errors->first('image') }}</div>
                                                         @endif

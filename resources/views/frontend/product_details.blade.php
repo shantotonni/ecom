@@ -1,6 +1,6 @@
 @extends('layouts.frontend.master')
 
-@section('title','Category Product | Ecom')
+@section('title','Category Product | Emirathai')
 
 @section('content')
     <div class="banner_bottom_agile_info">

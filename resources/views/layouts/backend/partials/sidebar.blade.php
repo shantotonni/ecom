@@ -23,7 +23,7 @@
                         <span>Product <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span></span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="{{ route('product.index') }}">Product List</a></li>
+                        <li><a href="{{ route('product.list') }}">Product List</a></li>
                     </ul>
                 </li>
                 <li>
@@ -32,7 +32,25 @@
                         <span>Slider <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span></span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="{{ route('slider.index') }}">Slider List</a></li>
+                        <li><a href="{{ route('slider.list') }}">Slider List</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect">
+                        <i class="mdi mdi-keg"></i>
+                        <span>Order <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="{{ route('order.list') }}">Order List</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect">
+                        <i class="mdi mdi-keg"></i>
+                        <span>Contact <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="{{ route('contact.list') }}">Contact List</a></li>
                     </ul>
                 </li>
             </ul>

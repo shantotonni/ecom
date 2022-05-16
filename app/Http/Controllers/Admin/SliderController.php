@@ -40,7 +40,7 @@ class SliderController extends Controller
         $slider->save();
 
         Toastr::success('Slider created successfully :)' ,'Success');
-        return redirect()->route('slider.index');
+        return redirect()->route('slider.list');
     }
 
     public function edit($id){
@@ -73,7 +73,7 @@ class SliderController extends Controller
         $slider->save();
 
         Toastr::success('Slider Updated successfully :)' ,'Success');
-        return redirect()->route('slider.index');
+        return redirect()->route('slider.list');
     }
 
 }
