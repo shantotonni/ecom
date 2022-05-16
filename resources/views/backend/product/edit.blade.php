@@ -20,7 +20,7 @@
                     <div class="col-sm-6">
                         <div class="float-right d-none d-md-block">
                             <div class="card-tools">
-                                <a href="{{ route('product.index') }}" class="btn btn-success btn-sm">
+                                <a href="{{ route('product.list') }}" class="btn btn-success btn-sm">
                                     <i class="mdi mdi-keyboard-backspace"></i>
                                     Back
                                 </a>

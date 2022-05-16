@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'HomeController@home')->name('home');
-Route::get('category/{slug}', 'HomeController@categoryProduct')->name('category.product');
+Route::get('category-product/{slug}', 'HomeController@categoryProduct')->name('category.product');
 Route::get('product-details/{slug}', 'HomeController@productDetails')->name('product.details');
 Route::get('contact-us', 'HomeController@contactUs')->name('contact.us');
 Route::post('contact-store', 'HomeController@contactStore')->name('contact.store');
