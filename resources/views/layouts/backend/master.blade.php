@@ -31,7 +31,7 @@
     @yield('content')
 
     <footer class="footer">
-        © 2022 <span class="d-none d-sm-inline-block">- Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</span>.
+        © 2022 <span class="d-none d-sm-inline-block">- Developed By Sentu</span>.
     </footer>
     </div>
 

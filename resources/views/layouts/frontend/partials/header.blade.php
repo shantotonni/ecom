@@ -46,11 +46,23 @@
                             <li class="menu__item @if($segment1 ==  $category->slug) active menu__item--current @endif"><a class="menu__link" href="{{ route('category.product', $category->slug) }}">{{ $category->name }}</a></li>
                             @endforeach
                             <li class="menu__item {{ (request()->is('contact-us')) ? 'active menu__item--current' : '' }}"><a class="menu__link" href="{{ route('contact.us') }}">Contact</a></li>
-                            <li class="menu__item {{ (request()->is('order')) ? 'active menu__item--current' : '' }}"><a class="menu__link" href="{{ route('order') }}">Order</a></li>
+{{--                            <li class="menu__item {{ (request()->is('order')) ? 'active menu__item--current' : '' }}"><a class="menu__link" href="{{ route('order') }}">Order</a></li>--}}
                         </ul>
                     </div>
                 </div>
             </nav>
+        </div>
+        <div class="top_nav_right">
+            <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+                <a class="w3view-cart cart-qty" type="submit" href="{{ route('cart.details') }}">
+                    <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    @if (Cart::instance('default')->count() > 0)
+                        {{ Cart::instance('default')->count() }}
+                    @else
+                        0
+                    @endif
+                </a>
+            </div>
         </div>
         <div class="clearfix"></div>
     </div>

@@ -1438,6 +1438,16 @@ button.w3view-cart {
     font-size: 24px;
     color: #000;
 }
+
+.w3view-cart {
+    outline: none;
+    border: none;
+    background: #17c3a2;
+    width: 48px;
+    height: 43px;
+    font-size: 30px;
+    color: #000;
+}
 /*-- //cart --*/
 /*-- effect --*/
 .men-pro-item {

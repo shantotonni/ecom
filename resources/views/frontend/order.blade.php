@@ -11,7 +11,7 @@
                         <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
                     @endif
                     <div class="col-md-6 col-md-offset-3 contact-form">
-                        <h4 class="white-w3ls">Contact <span>Form</span></h4>
+                        <h4 class="white-w3ls">Order <span>Form</span></h4>
                         <form action="{{ route('order.store') }}" method="post">
                             {{ csrf_field() }}
                             <div class="styled-input agile-styled-input-top">
@@ -50,7 +50,7 @@
                                 <span></span>
                             </div>
 
-                            <input type="submit" value="SEND">
+                            <input type="submit" value="Submit">
                         </form>
                     </div>
                 </div>
