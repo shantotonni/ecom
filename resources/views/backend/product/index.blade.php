@@ -17,7 +17,7 @@
                     <div class="col-sm-6">
                         <div class="float-right d-none d-md-block">
                             <div class="card-tools">
-                                <a href="{{ route('product.create') }}" class="btn btn-success btn-sm">
+                                <a href="{{ route('products.create') }}" class="btn btn-success btn-sm">
                                     <i class="fas fa-plus"></i>
                                     Add Product
                                 </a>
@@ -61,14 +61,14 @@
                                                     {!! $product->description_thai  !!}
                                                 </td>
                                                 <td class="text-center">
-                                                    <img src="{{ url('product/'.$product->image) }}" alt="" height="80">
+                                                    <img src="{{ url('products/'.$product->image) }}" alt="" height="80">
 {{--                                                    <img src="{{ url('product/'.$product->image_thai) }}" alt="" height="80">--}}
                                                 </td>
                                                 <td class="text-center">
                                                     {!! $product->remartks  !!}
                                                 </td>
                                                 <td class="text-center">
-                                                    <a href="{{ url('/product/'.$product->id.'/edit') }}" class="btn btn-success btn-sm"><i class="far fa-edit"></i></a>
+                                                    <a href="{{ url('/products/'.$product->id.'/edit') }}" class="btn btn-success btn-sm"><i class="far fa-edit"></i></a>
 {{--                                                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>--}}
                                                 </td>
                                             </tr>

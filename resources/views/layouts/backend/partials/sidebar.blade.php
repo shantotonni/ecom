@@ -23,7 +23,7 @@
                         <span>Product <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span></span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="{{ route('product.list') }}">Product List</a></li>
+                        <li><a href="{{ route('products.list') }}">Product List</a></li>
                     </ul>
                 </li>
                 <li>

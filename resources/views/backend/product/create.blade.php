@@ -20,7 +20,7 @@
                     <div class="col-sm-6">
                         <div class="float-right d-none d-md-block">
                             <div class="card-tools">
-                                <a href="{{ route('product.list') }}" class="btn btn-success btn-sm">
+                                <a href="{{ route('products.list') }}" class="btn btn-success btn-sm">
                                     <i class="mdi mdi-keyboard-backspace"></i>
                                     Back
                                 </a>
@@ -34,7 +34,7 @@
                     <div class="card">
                         <div class="datatable">
                             <div class="card-body">
-                                <form action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
+                                <form action="{{ route('products.store') }}" method="post" enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 <!-- end row -->
                                     <div class="row">

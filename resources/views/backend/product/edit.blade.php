@@ -20,7 +20,7 @@
                     <div class="col-sm-6">
                         <div class="float-right d-none d-md-block">
                             <div class="card-tools">
-                                <a href="{{ route('product.list') }}" class="btn btn-success btn-sm">
+                                <a href="{{ route('products.list') }}" class="btn btn-success btn-sm">
                                     <i class="mdi mdi-keyboard-backspace"></i>
                                     Back
                                 </a>
@@ -34,7 +34,7 @@
                     <div class="card">
                         <div class="datatable">
                             <div class="card-body">
-                                <form action="{{ route('product.update',$product->id) }}" method="post" enctype="multipart/form-data">
+                                <form action="{{ route('products.update',$product->id) }}" method="post" enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 @method('PATCH')
                                 <!-- end row -->
@@ -52,7 +52,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Product Code</label>
-                                                        <input type="text" class="form-control" name="code" value="{{ $product->code }}" readonly required="" placeholder="Enter product code">
+                                                        <input type="text" class="form-control" name="code" value="{{ $product->code }}" required="" placeholder="Enter product code">
                                                         @if ($errors->has('code'))
                                                             <div class="error" style="color: red">{{ $errors->first('code') }}</div>
                                                         @endif

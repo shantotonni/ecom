@@ -23,7 +23,6 @@ class ProductController extends Controller
     }
 
     public function store(Request $request){
-
         $this->validate($request, [
             'name' => 'required|min:3',
             'name_thai' => 'required',
@@ -68,7 +67,7 @@ class ProductController extends Controller
         $product->save();
 
         Toastr::success('Product created successfully :)' ,'Success');
-        return redirect()->route('product.list');
+        return redirect()->route('products.list');
     }
 
     public function edit($id){
@@ -132,6 +131,6 @@ class ProductController extends Controller
         $product->save();
 
         Toastr::success('Product Updated successfully :)' ,'Success');
-        return redirect()->route('product.list');
+        return redirect()->route('products.list');
     }
 }

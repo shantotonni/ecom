@@ -41,8 +41,9 @@ Route::post('admin-login', 'Auth\LoginController@login')->name('admin.login');
 Route::group(['middleware'=>'auth'], function(){
     Route::get('dashboard', 'Admin\DashboardController@dashboard')->name('admin.dashboard');
     Route::resource('category', 'Admin\CategoryController');
-    Route::get('product-list', 'Admin\ProductController@index')->name('product.list');
-    Route::resource('product', 'Admin\ProductController');
+    Route::get('product-list', 'Admin\ProductController@index')->name('products.list');
+    //Route::post('product-store', 'Admin\ProductController@store')->name('products.store');
+    Route::resource('products', 'Admin\ProductController');
     Route::get('slider-list', 'Admin\SliderController@index')->name('slider.list');
     Route::resource('slider', 'Admin\SliderController');
 

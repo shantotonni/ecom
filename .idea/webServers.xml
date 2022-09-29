@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="fe707f14-946d-4adc-9b08-24278e32ca0f" name="ecom" url="http://199.188.200.150">
-        <fileTransfer rootFolder="/ecom.ideaheed.com" host="199.188.200.150" port="21">
+      <webServer id="46b14219-8c0b-4943-bcd8-4582f574ab9a" name="ecom2" url="http://emirathai.com">
+        <fileTransfer rootFolder="/public_html" host="emirathai.com" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
